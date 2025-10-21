@@ -8,6 +8,9 @@ pnpm-lock.yaml
 dist/
 build/
 *.tsbuildinfo
+.claude-flow
+.claude.swarm
+
 
 # Testing
 coverage/
