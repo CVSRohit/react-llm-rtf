@@ -1,0 +1,523 @@
+/* Import CSS Variables */
+@import './LLMRichText-variables.css';
+
+/* Base container styles */
+.llm-rich-text-container {
+  font-family: var(--llm-font-body);
+  font-size: var(--llm-font-size-base);
+  line-height: 1.6;
+  color: var(--llm-text-color);
+  background: var(--llm-background);
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Headings */
+.llm-rich-text-container h1,
+.llm-rich-text-container h2,
+.llm-rich-text-container h3,
+.llm-rich-text-container h4,
+.llm-rich-text-container h5,
+.llm-rich-text-container h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.llm-rich-text-container h1 {
+  font-size: 2em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+}
+
+.llm-rich-text-container h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+}
+
+.llm-rich-text-container h3 {
+  font-size: 1.25em;
+}
+
+.llm-rich-text-container h4 {
+  font-size: 1em;
+}
+
+.llm-rich-text-container h5 {
+  font-size: 0.875em;
+}
+
+.llm-rich-text-container h6 {
+  font-size: 0.85em;
+  color: #6a737d;
+}
+
+/* Paragraphs */
+.llm-rich-text-container p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Links */
+.llm-rich-text-container a {
+  color: #0366d6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.llm-rich-text-container a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Code blocks */
+.llm-rich-text-container pre {
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.llm-rich-text-container pre code {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  white-space: pre;
+  word-break: normal;
+  display: block;
+}
+
+/* Inline code */
+.llm-rich-text-container code.inline-code {
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
+  color: #e01e5a;
+}
+
+/* Lists */
+.llm-rich-text-container ul,
+.llm-rich-text-container ol {
+  padding-left: 2em;
+  margin-bottom: 16px;
+}
+
+.llm-rich-text-container li {
+  margin-bottom: 0.25em;
+}
+
+.llm-rich-text-container li > p {
+  margin-bottom: 0.5em;
+}
+
+/* Task Lists / Checkboxes */
+.llm-rich-text-container input[type="checkbox"] {
+  margin-right: 0.5em;
+  margin-left: -1.5em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.llm-rich-text-container li.task-list-item {
+  list-style-type: none;
+}
+
+.llm-rich-text-container ul.contains-task-list {
+  padding-left: 1.5em;
+}
+
+.llm-rich-text-container li.task-list-item input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Nested lists */
+.llm-rich-text-container ul ul,
+.llm-rich-text-container ul ol,
+.llm-rich-text-container ol ol,
+.llm-rich-text-container ol ul {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+/* Blockquotes */
+.llm-rich-text-container blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+  margin: 0 0 16px 0;
+  background-color: #f6f8fa;
+  border-radius: 0 6px 6px 0;
+}
+
+.llm-rich-text-container blockquote > :first-child {
+  margin-top: 0;
+}
+
+.llm-rich-text-container blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+/* Tables */
+.llm-rich-text-container table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 16px;
+  overflow: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.llm-rich-text-container table th,
+.llm-rich-text-container table td {
+  padding: 8px 13px;
+  border: 1px solid #dfe2e5;
+  text-align: left;
+  vertical-align: top;
+}
+
+.llm-rich-text-container table th {
+  font-weight: 600;
+  background-color: #f6f8fa;
+  text-align: left;
+}
+
+.llm-rich-text-container table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.llm-rich-text-container table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+/* Table alignment support */
+.llm-rich-text-container table th[align="left"],
+.llm-rich-text-container table td[align="left"] {
+  text-align: left;
+}
+
+.llm-rich-text-container table th[align="center"],
+.llm-rich-text-container table td[align="center"] {
+  text-align: center;
+}
+
+.llm-rich-text-container table th[align="right"],
+.llm-rich-text-container table td[align="right"] {
+  text-align: right;
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+  .llm-rich-text-container table {
+    font-size: 14px;
+  }
+
+  .llm-rich-text-container table th,
+  .llm-rich-text-container table td {
+    padding: 6px 8px;
+  }
+}
+
+/* Horizontal rule */
+.llm-rich-text-container hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+/* Images */
+.llm-rich-text-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 16px 0;
+}
+
+/* Strong and emphasis */
+.llm-rich-text-container strong {
+  font-weight: 600;
+}
+
+.llm-rich-text-container em {
+  font-style: italic;
+}
+
+/* Strikethrough */
+.llm-rich-text-container del,
+.llm-rich-text-container s {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Marked/Highlighted text */
+.llm-rich-text-container mark {
+  background-color: #fff3cd;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  color: inherit;
+}
+
+/* Underline */
+.llm-rich-text-container u {
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+/* Superscript and Subscript */
+.llm-rich-text-container sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.llm-rich-text-container sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+/* Abbreviations */
+.llm-rich-text-container abbr {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+/* Keyboard keys */
+.llm-rich-text-container kbd {
+  background-color: #f6f8fa;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+  color: #24292e;
+  display: inline-block;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.85em;
+  line-height: 1;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+/* Collapsible sections (details/summary) */
+.llm-rich-text-container details {
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  background-color: #f6f8fa;
+}
+
+.llm-rich-text-container details summary {
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  padding: 4px 0;
+  outline: none;
+}
+
+.llm-rich-text-container details summary:hover {
+  color: #0366d6;
+}
+
+.llm-rich-text-container details[open] {
+  padding: 12px;
+}
+
+.llm-rich-text-container details[open] summary {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #d1d5da;
+  padding-bottom: 8px;
+}
+
+/* Footnotes */
+.llm-rich-text-container .footnote-ref {
+  vertical-align: super;
+  font-size: smaller;
+  text-decoration: none;
+  padding: 0 2px;
+}
+
+.llm-rich-text-container .footnote-ref:hover {
+  text-decoration: underline;
+}
+
+.llm-rich-text-container .footnotes {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid #e1e4e8;
+  font-size: 0.9em;
+}
+
+.llm-rich-text-container .footnotes ol {
+  padding-left: 1.5em;
+}
+
+/* Definition lists */
+.llm-rich-text-container dl {
+  margin-bottom: 16px;
+}
+
+.llm-rich-text-container dt {
+  font-weight: 600;
+  margin-top: 16px;
+  font-style: italic;
+}
+
+.llm-rich-text-container dd {
+  margin-left: 2em;
+  margin-bottom: 8px;
+}
+
+/* Code copy button */
+.code-copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  background-color: #f6f8fa;
+  border: 1px solid #d1d5da;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  color: #24292e;
+}
+
+.llm-rich-text-container pre:hover .code-copy-button {
+  opacity: 1;
+}
+
+.code-copy-button:hover {
+  background-color: #e1e4e8;
+}
+
+.code-copy-button:active {
+  background-color: #d1d5da;
+}
+
+.code-copy-button.copied {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+/* Streaming cursor */
+.streaming-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #333;
+  margin-left: 2px;
+  animation: blink 1.06s infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Fade-in animation for streaming content */
+.fade-in {
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Dark theme support (optional) */
+@media (prefers-color-scheme: dark) {
+  .llm-rich-text-container {
+    color: #e6edf3;
+  }
+
+  .llm-rich-text-container h1,
+  .llm-rich-text-container h2 {
+    border-bottom-color: #30363d;
+  }
+
+  .llm-rich-text-container h6 {
+    color: #8b949e;
+  }
+
+  .llm-rich-text-container a {
+    color: #58a6ff;
+  }
+
+  .llm-rich-text-container a:hover {
+    color: #79c0ff;
+  }
+
+  .llm-rich-text-container pre {
+    background-color: #161b22;
+  }
+
+  .llm-rich-text-container code.inline-code {
+    background-color: rgba(110, 118, 129, 0.4);
+    color: #ff7b72;
+  }
+
+  .llm-rich-text-container blockquote {
+    color: #8b949e;
+    border-left-color: #3b434b;
+    background-color: #161b22;
+  }
+
+  .llm-rich-text-container table th {
+    background-color: #161b22;
+  }
+
+  .llm-rich-text-container table td,
+  .llm-rich-text-container table th {
+    border-color: #30363d;
+  }
+
+  .llm-rich-text-container table tr {
+    background-color: #0d1117;
+    border-top-color: #21262d;
+  }
+
+  .llm-rich-text-container table tr:nth-child(2n) {
+    background-color: #161b22;
+  }
+
+  .llm-rich-text-container hr {
+    background-color: #21262d;
+  }
+
+  .code-copy-button {
+    background-color: #21262d;
+    border-color: #30363d;
+    color: #c9d1d9;
+  }
+
+  .code-copy-button:hover {
+    background-color: #30363d;
+  }
+
+  .streaming-cursor {
+    background-color: #e6edf3;
+  }
+}

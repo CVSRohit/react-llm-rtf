@@ -1,0 +1,166 @@
+/* CSS Variables for Customization */
+.llm-rich-text-container {
+  /* Text Colors */
+  --llm-text-color: #333;
+  --llm-text-secondary: #6a737d;
+  --llm-heading-color: #1a1a1a;
+
+  /* Link Colors */
+  --llm-link-color: #0366d6;
+  --llm-link-hover: #0056b3;
+  --llm-link-visited: #6f42c1;
+
+  /* Code Colors */
+  --llm-code-color: #e01e5a;
+  --llm-code-bg: rgba(175, 184, 193, 0.2);
+  --llm-code-block-bg: #f6f8fa;
+  --llm-code-block-border: #d1d5da;
+
+  /* Blockquote Colors */
+  --llm-blockquote-border: #dfe2e5;
+  --llm-blockquote-bg: #f6f8fa;
+  --llm-blockquote-text: #6a737d;
+
+  /* Table Colors */
+  --llm-table-border: #dfe2e5;
+  --llm-table-header-bg: #f6f8fa;
+  --llm-table-header-text: #24292e;
+  --llm-table-row-bg: #fff;
+  --llm-table-row-alt-bg: #f6f8fa;
+  --llm-table-row-hover-bg: #f0f0f0;
+
+  /* List Colors */
+  --llm-list-bullet-color: currentColor;
+  --llm-list-number-color: currentColor;
+  --llm-task-checkbox-bg: #fff;
+  --llm-task-checkbox-border: #d1d5da;
+  --llm-task-checkbox-checked: #0366d6;
+
+  /* Other Element Colors */
+  --llm-hr-color: #e1e4e8;
+  --llm-mark-bg: #fff3cd;
+  --llm-mark-text: inherit;
+  --llm-kbd-bg: #f6f8fa;
+  --llm-kbd-border: #d1d5da;
+  --llm-kbd-text: #24292e;
+
+  /* Interactive Elements */
+  --llm-details-bg: #f6f8fa;
+  --llm-details-border: #d1d5da;
+  --llm-summary-hover-color: #0366d6;
+
+  /* Copy Button */
+  --llm-copy-button-bg: #f6f8fa;
+  --llm-copy-button-border: #d1d5da;
+  --llm-copy-button-text: #24292e;
+  --llm-copy-button-hover-bg: #e1e4e8;
+
+  /* Background */
+  --llm-background: transparent;
+
+  /* Fonts */
+  --llm-font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  --llm-font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  --llm-font-code: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
+  --llm-font-monospace: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
+
+  /* Font Sizes */
+  --llm-font-size-base: 16px;
+  --llm-font-size-h1: 2em;
+  --llm-font-size-h2: 1.5em;
+  --llm-font-size-h3: 1.25em;
+  --llm-font-size-h4: 1em;
+  --llm-font-size-h5: 0.875em;
+  --llm-font-size-h6: 0.85em;
+  --llm-font-size-code: 85%;
+  --llm-font-size-small: 0.9em;
+
+  /* Font Weights */
+  --llm-font-weight-normal: 400;
+  --llm-font-weight-medium: 500;
+  --llm-font-weight-semibold: 600;
+  --llm-font-weight-bold: 700;
+
+  /* Spacing */
+  --llm-spacing-paragraph: 16px;
+  --llm-spacing-heading: 24px;
+  --llm-spacing-list: 16px;
+  --llm-spacing-list-item: 0.25em;
+  --llm-spacing-code-block: 16px;
+  --llm-spacing-blockquote: 0 1em;
+  --llm-spacing-table-cell: 8px 13px;
+
+  /* Borders */
+  --llm-border-radius: 6px;
+  --llm-border-radius-small: 3px;
+  --llm-border-radius-large: 8px;
+  --llm-border-width: 1px;
+  --llm-border-style: solid;
+
+  /* List Styles */
+  --llm-list-bullet-style: disc;
+  --llm-list-number-style: decimal;
+  --llm-list-indentation: 2em;
+
+  /* Table Settings */
+  --llm-table-border-collapse: collapse;
+  --llm-table-border-spacing: 0;
+
+  /* Animations */
+  --llm-animation-duration: 0.2s;
+  --llm-animation-easing: ease;
+}
+
+/* Dark Mode Variables */
+@media (prefers-color-scheme: dark) {
+  .llm-rich-text-container {
+    /* Text Colors */
+    --llm-text-color: #e6edf3;
+    --llm-text-secondary: #8b949e;
+    --llm-heading-color: #ffffff;
+
+    /* Link Colors */
+    --llm-link-color: #58a6ff;
+    --llm-link-hover: #79c0ff;
+
+    /* Code Colors */
+    --llm-code-color: #ff7b72;
+    --llm-code-bg: rgba(110, 118, 129, 0.4);
+    --llm-code-block-bg: #161b22;
+    --llm-code-block-border: #30363d;
+
+    /* Blockquote Colors */
+    --llm-blockquote-border: #3b434b;
+    --llm-blockquote-bg: #161b22;
+    --llm-blockquote-text: #8b949e;
+
+    /* Table Colors */
+    --llm-table-border: #30363d;
+    --llm-table-header-bg: #161b22;
+    --llm-table-header-text: #e6edf3;
+    --llm-table-row-bg: #0d1117;
+    --llm-table-row-alt-bg: #161b22;
+    --llm-table-row-hover-bg: #1c2128;
+
+    /* Other Elements */
+    --llm-hr-color: #21262d;
+    --llm-mark-bg: #9a6700;
+    --llm-kbd-bg: #21262d;
+    --llm-kbd-border: #30363d;
+    --llm-kbd-text: #c9d1d9;
+
+    /* Interactive Elements */
+    --llm-details-bg: #161b22;
+    --llm-details-border: #30363d;
+
+    /* Copy Button */
+    --llm-copy-button-bg: #21262d;
+    --llm-copy-button-border: #30363d;
+    --llm-copy-button-text: #c9d1d9;
+    --llm-copy-button-hover-bg: #30363d;
+
+    /* Task Checkbox */
+    --llm-task-checkbox-bg: #0d1117;
+    --llm-task-checkbox-border: #30363d;
+  }
+}
